@@ -434,15 +434,31 @@ footer .hint kbd{
     <div class="bento">
 
       <article class="card big reveal">
+        <div class="shot"><img src="assets/radar-dashboard.webp" alt="Belgian AI Jobs Radar dashboard" loading="lazy"></div>
         <div class="body">
           <span class="cat">Data Pipelines &amp; LLM Extraction</span>
           <h3>Belgian AI Jobs Radar</h3>
-          <p class="desc"><b>Problem:</b> nobody knows what Belgian employers actually hire for in AI, week by week.<br><b>System:</b> a daily pipeline that ingests every new AI job posting in Belgium, deduplicates it, extracts structured signals with an LLM (role, stack, seniority, language demands, work mode) into SQLite, and publishes an interactive dashboard. It runs unattended on a GitHub Actions cron with a regression guard on every export.</p>
-          <div class="result-line">400+ active AI roles tracked, refreshed every day</div>
-          <div class="tags"><span>Python</span><span>Gemini</span><span>SQLite</span><span>ECharts</span><span>GitHub Actions</span><span>Azure</span></div>
+          <p class="desc"><b>Problem:</b> nobody knows what Belgian employers actually hire for in AI, week by week.<br><b>System:</b> a daily pipeline that ingests every new AI job posting in Belgium, deduplicates it, extracts structured signals with an LLM (role, stack, seniority, language demands, work mode) into SQLite, and publishes an interactive dashboard. It runs unattended on a GitHub Actions cron, with an encrypted state hand-over between runs and a weekly market report.</p>
+          <div class="result-line">2,700+ postings tracked since July 2026, refreshed every morning</div>
+          <div class="tags"><span>Python</span><span>Gemini</span><span>SQLite</span><span>ECharts</span><span>GitHub Actions</span><span>GitHub Pages</span></div>
           <div class="links">
+            <a href="https://kaangoker.github.io/belgian-ai-jobs-radar/" target="_blank" rel="noopener">Live dashboard</a>
             <a href="https://github.com/KaanGoker/belgian-ai-jobs-radar" target="_blank" rel="noopener">GitHub</a>
-            <span class="off">Live dashboard: this week</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card big reveal">
+        <div class="shot"><img src="assets/bejobs-dashboard.webp" alt="Belgian AI Jobs, read closely: skills, salaries and title clusters dashboard" loading="lazy"></div>
+        <div class="body">
+          <span class="cat">NLP &amp; Data Science</span>
+          <h3>Belgian AI Jobs, read closely</h3>
+          <p class="desc"><b>Problem:</b> the radar counts postings; it does not say what the ads ask for, what they pay, or which titles mean the same job.<br><b>System:</b> 1,300+ postings read twice, by a trilingual skills lexicon and by an LLM, with precision and recall between the two. A currency-anchored salary parser, lift per role family, skill co-occurrence, and job titles embedded with a multilingual sentence model and clustered with k-means, scored against an independent label. Every cell carries its n.</p>
+          <div class="result-line">9 title clusters, 900+ distinct skills, one honest number on how rarely Belgian ads talk money</div>
+          <div class="tags"><span>Python</span><span>pandas</span><span>scikit-learn</span><span>sentence-transformers</span><span>ECharts</span></div>
+          <div class="links">
+            <a href="https://kaangoker.github.io/be-jobs-nlp/" target="_blank" rel="noopener">Live dashboard</a>
+            <a href="https://github.com/KaanGoker/be-jobs-nlp" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
       </article>
@@ -853,14 +869,15 @@ Leuven, Belgium (since 2017)
 Advanced Master of AI @ KU Leuven (NLP & speech)
 Philosophy first, production systems now.`,
     projects: `[1] Belgian AI Jobs Radar ..... daily LLM extraction pipeline + dashboard
-[2] EU AI Act RAG Screener .... RAG + page-level citations (live on HF)
-[3] GetSubtitlesApp ........... Whisper ASR, 99 languages (live on HF)
-[4] Latin Poetry Generator .... QLoRA x27 + symbolic validator (thesis)
-[5] Belgium Tech Labour Pulse . Eurostat, t-test, clustering, forecast
-[6] Receptionist .............. NL/FR/EN voice agent, function calling
-[7] DocAgent .................. PDF Q&A with citations, refuses when unsure
-[8] Civ VII TR Localization ... 43k+ strings, model routing (Steam)
-[9] Art ....................... vision-LLM mobile app (side project)
+[2] BE AI Jobs, read closely .. skills lexicon vs LLM, salaries, title clusters
+[3] EU AI Act RAG Screener .... RAG + page-level citations (live on HF)
+[4] GetSubtitlesApp ........... Whisper ASR, 99 languages (live on HF)
+[5] Latin Poetry Generator .... QLoRA x27 + symbolic validator (thesis)
+[6] Belgium Tech Labour Pulse . Eurostat, t-test, clustering, forecast
+[7] Receptionist .............. NL/FR/EN voice agent, function calling
+[8] DocAgent .................. PDF Q&A with citations, refuses when unsure
+[9] Civ VII TR Localization ... 43k+ strings, model routing (Steam)
+[10] Art ...................... vision-LLM mobile app (side project)
 
 hint: open the Projects section for links.`,
     stack: `ai/ml ....... NLP, ASR, RAG, LLMs, PyTorch, Hugging Face, QLoRA/PEFT
